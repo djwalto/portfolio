@@ -1,0 +1,14 @@
+
+
+.parallax {
+    /* The image used */
+    background-image: url(https://64.media.tumblr.com/fb9ffe2bf29b5e583f252087bcc876a5/tumblr_pcvyyvdR9n1qeyvpto1_r1_500.gifv);
+    /* Full height */
+    min-height: 800px;
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
