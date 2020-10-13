@@ -7,6 +7,8 @@ margin: 0 auto;
 letter-spacing: .15em;
 text-decoration: none;
 font-size: 2.5rem;
+font-family: 'Montserrat', sans-serif;
+font-weight: lighter;
 animation: 
 typing 3.5s steps(40, end),
 blink-caret .75s step-end infinite;
