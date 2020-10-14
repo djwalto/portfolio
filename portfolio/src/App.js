@@ -98,7 +98,7 @@ class App extends React.Component {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }} >
 
             <ContactForm style={{ width: '40%' }} />
-            <FlipCard />
+
           </ParallaxLayer>
 
         </Parallax>
