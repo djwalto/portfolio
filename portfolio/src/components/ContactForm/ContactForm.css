@@ -1,8 +1,9 @@
-.contactContainer {
-  text-decoration: none;;
-}
 
-.textField {
-    color: white;
-    background-color: transparent;
+
+.contactCard {
+    height: 55ch;
+position: absolute;
+left: 10%;
+
+margin: 5px;
 }

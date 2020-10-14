@@ -7,6 +7,7 @@ import NetflixCard from "./components/NetflixCard/NetflixCard";
 import JAConnectCard from "./components/JAConnectCard/JAConnectCard";
 import CheckUPCard from "./components/CheckUPCard/CheckUPCard";
 import ContactForm from "./components/ContactForm/ContactForm";
+import BioCard from "./components/BioCard/BioCard";
 import { useSpring, animated } from 'react-spring/renderprops';
 import Image1 from "./sunbackground.jpeg";
 import FlipCard from "./components/FlipCard";
@@ -98,7 +99,7 @@ class App extends React.Component {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }} >
 
             <ContactForm style={{ width: '40%' }} />
-
+            <BioCard />
           </ParallaxLayer>
 
         </Parallax>

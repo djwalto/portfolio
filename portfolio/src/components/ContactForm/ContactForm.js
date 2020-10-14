@@ -21,73 +21,73 @@ function ContactForm() {
     const [contactInfo, setContactInfo] = useState('Contact Info');
 
     return (
-        <div className="contactDiv">
-            <Card className="contactCard" >
 
-                <Container className="contactContainer" component="main" maxWidth="xs">
-                    <CssBaseline />
-                    <div className="contactPaper">
+        <Card className="contactCard" >
 
-                        <form className="contactForm" noValidate>
+            <Container className="contactContainer" component="main" maxWidth="xs">
+                <CssBaseline />
+                <div className="contactPaper">
 
-                            <TextField
-                                className="textField"
-                                id="outlined-basic"
-                                label="Outlined"
-                                variant="outlined"
-                                margin="normal"
-                                fullWidth
-                                label="First Name"
-                                autoFocus
-                                type="text"
-                                name="first_name"
+                    <form className="contactForm" noValidate>
 
-                                required
-                                onChange
-                            />
-                            <TextField
-                                id="outlined-basic" label="Outlined" variant="outlined"
-                                margin="normal"
-                                fullWidth
-                                label="Last Name"
-                                autoFocus
-                                type="text"
-                                name="last_name"
+                        <TextField
+                            className="textField"
+                            id="outlined-basic"
+                            label="Outlined"
+                            variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            label="First Name"
 
-                                required
-                                onChange
-                            />
-                            <TextField
-                                id="outlined-basic" label="Outlined" variant="outlined"
-                                margin="normal"
-                                fullWidth
-                                label="Last Name"
-                                autoFocus
-                                type="text"
-                                name="last_name"
-                                value
-                                required
-                                onChange
-                            />
+                            type="text"
+                            name="first_name"
+
+                            required
+                            onChange
+                        />
+                        <TextField
+                            id="outlined-basic" label="Outlined" variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            label="Last Name"
+
+                            type="text"
+                            name="last_name"
+
+                            required
+                            onChange
+                        />
+                        <TextField
+                            id="outlined-basic" label="Outlined" variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            label="Last Name"
+
+                            type="text"
+                            name="last_name"
+
+                            required
+                            onChange
+                        />
 
 
 
-                            <center>
+                        <center>
 
-                                <Button
-                                    type="logbutton"
-                                    className="loginButton"
-                                    color="primary"
-                                >
-                                    Login
+                            <Button
+                                type="logbutton"
+                                className="loginButton"
+                                color="primary"
+                            >
+                                Login
                       </Button>
 
-                            </center>
-                        </form>
-                    </div>
-                </Container>
-            </Card>
-        </div >
+                        </center>
+                    </form>
+                </div>
+            </Container>
+        </Card>
+
 
     );
 }
