@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Card from "@material-ui/core/Card";
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
+import "./ContactForm.css";
 
 
 
@@ -14,59 +18,77 @@ import Container from '@material-ui/core/Container';
 function ContactForm() {
     // Using hooks we're creating local state for a "heading" variable with
     // a default value of 'Functional Component'
-    const [heading, setHeading] = useState('Functional Component');
+    const [contactInfo, setContactInfo] = useState('Contact Info');
 
     return (
-        <div className="registerDiv">
-            <div className="overlay">
-                <Card className="registerCard" >
-                    <Container className="registerContainer" component="main" maxWidth="xs">
-                        <CssBaseline />
-                        <div className="registerPaper">
+        <div className="contactDiv">
+            <Card className="contactCard" >
 
-                            <form className="registerForm" noValidate>
-                                <TextField
-                                    margin="normal"
-                                    fullWidth
-                                    label="First Name"
-                                    autoFocus
-                                    type="text"
-                                    name="first_name"
-                                    value
-                                    required
-                                    onChange
-                                />
-                                <TextField
-                                    margin="normal"
-                                    fullWidth
-                                    label="Last Name"
-                                    autoFocus
-                                    type="text"
-                                    name="last_name"
-                                    value
-                                    required
-                                    onChange
-                                />
+                <Container className="contactContainer" component="main" maxWidth="xs">
+                    <CssBaseline />
+                    <div className="contactPaper">
+
+                        <form className="contactForm" noValidate>
+
+                            <TextField
+                                className="textField"
+                                id="outlined-basic"
+                                label="Outlined"
+                                variant="outlined"
+                                margin="normal"
+                                fullWidth
+                                label="First Name"
+                                autoFocus
+                                type="text"
+                                name="first_name"
+
+                                required
+                                onChange
+                            />
+                            <TextField
+                                id="outlined-basic" label="Outlined" variant="outlined"
+                                margin="normal"
+                                fullWidth
+                                label="Last Name"
+                                autoFocus
+                                type="text"
+                                name="last_name"
+
+                                required
+                                onChange
+                            />
+                            <TextField
+                                id="outlined-basic" label="Outlined" variant="outlined"
+                                margin="normal"
+                                fullWidth
+                                label="Last Name"
+                                autoFocus
+                                type="text"
+                                name="last_name"
+                                value
+                                required
+                                onChange
+                            />
 
 
 
-                                <center>
+                            <center>
 
-                                    <Button
-                                        type="logbutton"
-                                        className="loginButton"
-                                        color="primary"
-                                    >
-                                        Login
+                                <Button
+                                    type="logbutton"
+                                    className="loginButton"
+                                    color="primary"
+                                >
+                                    Login
                       </Button>
 
-                                </center>
-                            </form>
-                        </div>
-                    </Container>
-                </Card>
-            </div >
-        </div>
+                            </center>
+                        </form>
+                    </div>
+                </Container>
+            </Card>
+        </div >
+
     );
 }
 // end RegisterForm
