@@ -9,8 +9,6 @@ import CheckUPCard from "./components/CheckUPCard/CheckUPCard";
 import ContactForm from "./components/ContactForm/ContactForm";
 import { useSpring, animated } from 'react-spring/renderprops';
 import Image1 from "./sunbackground.jpeg";
-import { rgbToHex } from '@material-ui/core';
-const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 
 
 class App extends React.Component {
