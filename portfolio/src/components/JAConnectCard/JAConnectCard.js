@@ -1,43 +1,19 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { Container } from '@material-ui/core';
-import Image1 from './jaconnect.png';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { useSpring, animated } from 'react-spring'
+import './JAConnectCard.css'
 
-
-const useStyles = makeStyles({
-    root: {
-        minWidth: 400,
-        minHeight: 275,
-        backgroundImage: `url(${Image1})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        margin: 10,
-
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
-});
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export default function JAConnectCard() {
-    const classes = useStyles();
-
+    const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
     return (
-        <Card className={classes.root}>
-            <CardContent>
-
-            </CardContent>
-            <CardActions>
-
-            </CardActions>
-        </Card>
-    );
+        <animated.div
+            className="jaconnectCard"
+            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+            onMouseLeave={() => set({ xys: [0, 0, 1] })}
+            style={{ transform: props.xys.interpolate(trans) }}
+        />
+    )
 }

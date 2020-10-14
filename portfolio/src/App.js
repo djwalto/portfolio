@@ -9,6 +9,7 @@ import CheckUPCard from "./components/CheckUPCard/CheckUPCard";
 import ContactForm from "./components/ContactForm/ContactForm";
 import { useSpring, animated } from 'react-spring/renderprops';
 import Image1 from "./sunbackground.jpeg";
+import FlipCard from "./components/FlipCard";
 
 
 class App extends React.Component {
@@ -97,7 +98,7 @@ class App extends React.Component {
             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }} >
 
             <ContactForm style={{ width: '40%' }} />
-
+            <FlipCard />
           </ParallaxLayer>
 
         </Parallax>
