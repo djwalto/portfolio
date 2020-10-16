@@ -1,7 +1,7 @@
 .typewriter {
 color: #fff;
 overflow: hidden;
-border-right: .15em solid orange;
+border-right: .15em solid #fff;
 white-space: nowrap;
 margin: 0 auto;
 letter-spacing: .15em;
@@ -21,6 +21,6 @@ blink-caret .75s step-end infinite;
 
 @keyframes blink-caret {
     from, to { border-color: transparent}
-    50% { border-color: orange; }
+    50% { border-color: #fff; }
 }
 

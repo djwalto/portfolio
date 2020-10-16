@@ -12,20 +12,18 @@
     cursor: pointer;
     will-change: transform, opacity;
   }
-  
+
   .front,
   .back {
     background-size: cover;
   }
-  
+
   .front {
     background-image: url("./biography.png");
     background-size: cover ;
     background-repeat: no-repeat;
-    
   }
-  
+
   .back {
     background-image: url("./bio.jpeg");
   }
-  
