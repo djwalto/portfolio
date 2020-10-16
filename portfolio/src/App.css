@@ -12,23 +12,23 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .secondParallax {
-    background-image: url(./module.gif);
-    margin-top: -45%;
+  /* .secondParallax {
+    background-image: url(./trip.gif);
+    margin-top: -55%;
     background-position: top !important;
     background-repeat: no-repeat;
-    background-size: contain !important;
-    opacity: 100%;
+    background-size: cover !important;
+    opacity: 90%;
    height: 100%;
-  }
+  } */
 
-  .thirdParallax {
-    background-image: url(./chair.gif);
+  /* .thirdParallax {
+    background-image: url(./.gif);
      background-position: center;
      background-repeat: no-repeat;
-     background-size: contain !important;
-     opacity: 70%;
+     background-size: cover !important;
+     opacity: 100%;
     height: 170%;
-  }
+  } */
 
   

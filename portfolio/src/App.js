@@ -2,6 +2,7 @@ import React from 'react'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import './App.css';
 import Nav from './components/Nav/Nav';
+import Footer from "./components/Footer/Footer";
 import IntroTyping from "./components/IntroTyping/IntroTyping";
 import NetflixCard from "./components/NetflixCard/NetflixCard";
 import JAConnectCard from "./components/JAConnectCard/JAConnectCard";
@@ -9,8 +10,7 @@ import CheckUPCard from "./components/CheckUPCard/CheckUPCard";
 import ContactForm from "./components/ContactForm/ContactForm";
 import BioCard from "./components/BioCard/BioCard";
 import { useSpring, animated } from 'react-spring/renderprops';
-import Image1 from "./sunbackground.jpeg";
-import FlipCard from "./components/FlipCard";
+
 
 
 class App extends React.Component {
@@ -20,6 +20,7 @@ class App extends React.Component {
     return (
       <div>
         <Parallax ref={ref => (this.parallax = ref)} pages={4}>
+
           <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'rgba(102, 235, 333, 0.3)' }} />
           <ParallaxLayer className="secondParallax" offset={2} speed={1} style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }} />
           <ParallaxLayer className="thirdParallax" offset={3} speed={1} style={{ backgroundColor: 'rgba(0, 64, 77,0.3)' }} />
@@ -101,8 +102,8 @@ class App extends React.Component {
             <ContactForm style={{ width: '40%' }} />
             <BioCard />
           </ParallaxLayer>
-
         </Parallax>
+        <Footer />
       </div >
     )
   }
