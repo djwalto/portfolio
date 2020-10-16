@@ -21,9 +21,9 @@ class App extends React.Component {
       <div>
         <Parallax ref={ref => (this.parallax = ref)} pages={4}>
           <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: 'rgba(102, 235, 333, 0.3)' }} />
-          <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }} />
-          <ParallaxLayer offset={3} speed={1} style={{ backgroundColor: 'rgba(0, 64, 77,0.3)' }} />
-          <ParallaxLayer offset={4} speed={1} style={{ backgroundColor: 'rgba(502, 135, 933, 0.3)' }} />
+          <ParallaxLayer className="secondParallax" offset={2} speed={1} style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }} />
+          <ParallaxLayer className="thirdParallax" offset={3} speed={1} style={{ backgroundColor: 'rgba(0, 64, 77,0.3)' }} />
+          <ParallaxLayer className="fourthParallax" offset={4} speed={1} style={{ backgroundColor: 'rgba(502, 135, 933, 0.3)' }} />
           {/* 
           <ParallaxLayer
             offset={1}

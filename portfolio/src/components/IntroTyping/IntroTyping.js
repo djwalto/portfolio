@@ -58,7 +58,7 @@ function IntroTyping() {
     return (
         <div>
             <h1>
-                <a href="" className="typewriter" data-period="2000" data-type='[ "Welcome to my page..", "I am David..", "I am a Software Developer...", "I love to create experiences...", "Scroll down for more..." ]'>
+                <a href="" className="typewriter" data-period="2000" data-type='[ "Welcome.... my name is David..", "I am a Software Developer...", "Scroll down to see more..." ]'>
                     <span className="wrap"></span>
                 </a>
             </h1>
