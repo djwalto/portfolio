@@ -8,6 +8,9 @@ const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWid
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 export default function CheckUPCard() {
+    let site = 'https://vimeo.com/460774354';
+    let repo = 'https://github.com/djwalto/CheckUP';
+
     const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
     return (
         <div className="cardDiv">
@@ -17,7 +20,7 @@ export default function CheckUPCard() {
                 onMouseLeave={() => set({ xys: [0, 0, 1] })}
                 style={{ transform: props.xys.interpolate(trans) }}
             />
-            <CardIcons />
+            <CardIcons site={site} repo={repo} />
         </div>
     )
 }
