@@ -73,7 +73,9 @@ function ContactForm() {
                         />
                         <TextField
                             className="textField"
-                            id="outlined-basic" label="Outlined" variant="outlined"
+                            id="outlined-multiline-static" label="Outlined" variant="outlined"
+                            multiline
+                            rows={4}
                             margin="normal"
                             fullWidth
                             label="Message"
