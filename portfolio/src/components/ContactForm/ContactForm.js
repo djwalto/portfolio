@@ -46,6 +46,7 @@ function ContactForm() {
                             onChange
                         />
                         <TextField
+                            className="textField"
                             id="outlined-basic" label="Outlined" variant="outlined"
                             margin="normal"
                             fullWidth
@@ -58,13 +59,27 @@ function ContactForm() {
                             onChange
                         />
                         <TextField
+                            className="textField"
                             id="outlined-basic" label="Outlined" variant="outlined"
                             margin="normal"
                             fullWidth
-                            label="Last Name"
+                            label="Email"
 
                             type="text"
-                            name="last_name"
+                            name="email"
+
+                            required
+                            onChange
+                        />
+                        <TextField
+                            className="textField"
+                            id="outlined-basic" label="Outlined" variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            label="Message"
+
+                            type="text"
+                            name="mesage"
 
                             required
                             onChange
@@ -79,7 +94,7 @@ function ContactForm() {
                                 className="loginButton"
                                 color="primary"
                             >
-                                Login
+                                Send Message
                       </Button>
 
                         </center>

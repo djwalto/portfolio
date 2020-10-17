@@ -1,10 +1,32 @@
 
 
 .contactCard {
-    height: 20rem;
+    background-color: rgba(19, 18, 18, 0.815) !important;
+    color: whitesmoke !important;
+    height: 24rem;
     position: absolute;
     left: 10%;
     margin: 5px;
+    padding: 10px;
   
 }
 
+.MuiFormLabel-root {
+    color: whitesmoke !important;
+}
+
+.input {
+    color: whitesmoke !important;
+}
+
+.MuiPaper-root{
+    border: 1px solid whitesmoke;
+}
+
+.MuiInputBase-root {
+    color: whitesmoke !important;
+}
+
+.loginButton {
+    color: whitesmoke !important;
+}

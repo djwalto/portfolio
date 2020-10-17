@@ -5,7 +5,7 @@
         width: 100%;
         background-color: rgb(56, 118, 160) !important;
         position: absolute !important;
-        justify-content: space-evenly;
+        /* justify-content: space-evenly; */
         padding-top: -16% !important;
       
     }
@@ -28,9 +28,13 @@
  } */
   
  .copyright {
-     
- margin-left: 100%;
- font-size: 1.3rem !important;
+     display: inline !important;
+     padding-top: 1%;
+ margin-left: 60%;
+ margin-right: 5% !important;
+ font-size: 1.6rem !important;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: lighter !important;
 
  }
 

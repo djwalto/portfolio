@@ -16,7 +16,7 @@ export default function Footer() {
     return (
         <div >
             <AppBar position="static" className="footer">
-                <Container maxWidth="md" className="container">
+                <Container maxWidth="lrg" className="container">
                     <Toolbar>
                         <div className="footerLinks">
                             <a href="https://github.com/djwalto" target="_blank" rel="noopener noreferrer">
@@ -27,7 +27,7 @@ export default function Footer() {
                             </a>
                         </div>
                         <div className="copyright">
-                            <h3 className="copy">    &copy; David Walton</h3>
+                            <h5 className="copy">     David Walton  |  Software Developer    </h5>
                         </div>
 
                     </Toolbar>
