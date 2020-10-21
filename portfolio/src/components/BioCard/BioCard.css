@@ -18,13 +18,13 @@
     background-size: cover;
   }
 
-  .front {
+  .back {
     background-image: url("./biography.png");
     background-size: contain ;
     background-repeat: no-repeat;
     height: 100%;
   }
 
-  .back {
+  .front {
     background-image: url("./bio.jpeg");
   }
