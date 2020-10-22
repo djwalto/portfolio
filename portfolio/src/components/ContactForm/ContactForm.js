@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import Card from "@material-ui/core/Card";
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -8,116 +8,133 @@ import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
+import swal from 'sweetalert';
 import "./ContactForm.css";
 
 
 
-// Basic functional component structure for React with default state
-// value setup. When making a new component be sure to replace the
-// component name TemplateFunction with the name for the new component.
-function ContactForm() {
-    // Using hooks we're creating local state for a "heading" variable with
-    // a default value of 'Functional Component'
-    const [contactInfo, setContactInfo] = useState({
+
+class ContactForm extends Component {
+
+    state = {
         first_name: '',
         last_name: '',
         email: '',
         message: ''
 
-    });
+    };
 
-    const onContactChange = (e) => {
-        const contactInfo = e.target.value;
+    onContactChange = (input) => (event) => {
+        console.log(event.target.value)
+        this.setState({
+            [input]: (event.target.value),
+        }, () => { console.log(this.state) });
+    };
 
-    }
+    onClick = (event) => {
+        event.preventDefault();
+        console.log(this.state);
+        swal("Thanks!", "I will respond as soon as I can.", "success", {
+            button: "OK",
+        });
+        this.setState({
+            first_name: '',
+            last_name: '',
+            email: '',
+            message: ''
+        })
+    };// end onClick
 
-    return (
+    render() {
+        return (
 
-        <Card className="contactCard" >
+            <Card className="contactCard" >
 
-            <Container className="contactContainer" component="main" maxWidth="xs">
-                <CssBaseline />
-                <div className="contactPaper">
+                <Container className="contactContainer" component="main" maxWidth="xs">
+                    <CssBaseline />
+                    <div className="contactPaper">
 
-                    <form className="contactForm" noValidate>
+                        <form className="contactForm" noValidate>
 
-                        <TextField
-                            className="textField"
-                            id="outlined-basic"
-                            label="Outlined"
-                            variant="outlined"
-                            margin="normal"
-                            fullWidth
-                            label="First Name"
+                            <TextField
+                                className="textField"
+                                id="outlined-basic"
+                                label="Outlined"
+                                variant="outlined"
+                                margin="normal"
+                                fullWidth
+                                label="First Name"
 
-                            type="text"
-                            name="first_name"
+                                type="text"
+                                name="first_name"
+                                value={this.state.first_name}
+                                required
+                                onChange={this.onContactChange('first_name')}
+                            />
+                            <TextField
+                                className="textField"
+                                id="outlined-basic" label="Outlined" variant="outlined"
+                                margin="normal"
+                                fullWidth
+                                label="Last Name"
 
-                            required
-                            onChange
-                        />
-                        <TextField
-                            className="textField"
-                            id="outlined-basic" label="Outlined" variant="outlined"
-                            margin="normal"
-                            fullWidth
-                            label="Last Name"
+                                type="text"
+                                name="last_name"
+                                value={this.state.last_name}
+                                required
+                                onChange={this.onContactChange('last_name')}
+                            />
+                            <TextField
+                                className="textField"
+                                id="outlined-basic" label="Outlined" variant="outlined"
+                                margin="normal"
+                                fullWidth
+                                label="Email"
+                                value={this.state.email}
+                                type="text"
+                                name="email"
 
-                            type="text"
-                            name="last_name"
+                                required
+                                onChange={this.onContactChange('email')}
+                            />
+                            <TextField
+                                className="textField"
+                                id="outlined-multiline-static" label="Outlined" variant="outlined"
+                                multiline
+                                rows={4}
+                                margin="normal"
+                                fullWidth
+                                label="Message"
+                                value={this.state.message}
+                                type="text"
+                                name="mesage"
 
-                            required
-                            onChange={onContactChange}
-                        />
-                        <TextField
-                            className="textField"
-                            id="outlined-basic" label="Outlined" variant="outlined"
-                            margin="normal"
-                            fullWidth
-                            label="Email"
-
-                            type="text"
-                            name="email"
-
-                            required
-                            onChange
-                        />
-                        <TextField
-                            className="textField"
-                            id="outlined-multiline-static" label="Outlined" variant="outlined"
-                            multiline
-                            rows={4}
-                            margin="normal"
-                            fullWidth
-                            label="Message"
-
-                            type="text"
-                            name="mesage"
-
-                            required
-                            onChange
-                        />
+                                required
+                                onChange={this.onContactChange('message')}
+                            />
 
 
 
-                        <center>
+                            <center>
 
-                            <Button
-                                type="logbutton"
-                                className="loginButton"
-                                color="primary"
-                            >
-                                Send Message
+                                <Button
+                                    type="submit"
+                                    className="loginButton"
+                                    color="primary"
+                                    onClick={this.onClick}
+                                >
+                                    Send Message
                       </Button>
 
-                        </center>
-                    </form>
-                </div>
-            </Container>
-        </Card>
+                            </center>
+                        </form>
+                    </div>
+                </Container>
+            </Card>
 
 
-    );
+        );
+    }
 }
 // end RegisterForm
 
