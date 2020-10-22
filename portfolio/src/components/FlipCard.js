@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { useSpring, animated } from 'react-spring'
 import './FlipCard.css'
 
@@ -16,7 +15,6 @@ export default function FlipCard() {
             onMouseLeave={() => set({ xys: [0, 0, 1] })}
             style={{ transform: props.xys.interpolate(trans) }}
         >
-
         </animated.div>
     )
 }

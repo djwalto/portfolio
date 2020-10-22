@@ -18,7 +18,18 @@ import "./ContactForm.css";
 function ContactForm() {
     // Using hooks we're creating local state for a "heading" variable with
     // a default value of 'Functional Component'
-    const [contactInfo, setContactInfo] = useState('Contact Info');
+    const [contactInfo, setContactInfo] = useState({
+        first_name: '',
+        last_name: '',
+        email: '',
+        message: ''
+
+    });
+
+    const onContactChange = (e) => {
+        const contactInfo = e.target.value;
+
+    }
 
     return (
 
@@ -56,7 +67,7 @@ function ContactForm() {
                             name="last_name"
 
                             required
-                            onChange
+                            onChange={onContactChange}
                         />
                         <TextField
                             className="textField"
