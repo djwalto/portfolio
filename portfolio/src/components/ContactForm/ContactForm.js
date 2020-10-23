@@ -11,8 +11,7 @@ import Container from '@material-ui/core/Container';
 import swal from 'sweetalert';
 import "./ContactForm.css";
 
-
-
+const sendMail = require("../Nodemailer/Nodemailer");
 
 class ContactForm extends Component {
 
@@ -21,7 +20,6 @@ class ContactForm extends Component {
         last_name: '',
         email: '',
         message: ''
-
     };
 
     onContactChange = (input) => (event) => {
@@ -34,6 +32,7 @@ class ContactForm extends Component {
     onClick = (event) => {
         event.preventDefault();
         console.log(this.state);
+        sendMail(this.state);
         swal("Thanks!", "I will respond as soon as I can.", "success", {
             button: "OK",
         });
