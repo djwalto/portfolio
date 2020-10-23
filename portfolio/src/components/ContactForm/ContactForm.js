@@ -32,7 +32,7 @@ class ContactForm extends Component {
     onClick = (event) => {
         event.preventDefault();
         console.log(this.state);
-        sendMail(this.state);
+
         swal("Thanks!", "I will respond as soon as I can.", "success", {
             button: "OK",
         });
@@ -53,7 +53,7 @@ class ContactForm extends Component {
                     <CssBaseline />
                     <div className="contactPaper">
 
-                        <form className="contactForm" noValidate>
+                        <form action="/contact" className="contactForm" method="post" noValidate>
 
                             <TextField
                                 className="textField"
